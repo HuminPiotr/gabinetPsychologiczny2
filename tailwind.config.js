@@ -37,12 +37,15 @@ module.exports = {
             bg: "#fff",
             bgalt: "#f5f5f5",
             "color-default": "#333",
-            "color-1": "#8e24aa",
-            "color-2": "#673ab7",
+            "color-1": "#006C4C", //#564787
+            // "color-1": "#006C4C",
+            "color-2": "#000",
+            // "color-2": "#7DDAAA",
             "color-3": "#aeb4c5",
-            primary: "#f55555",
-            secondary: "#6888df",
-            link: "#0a71c5",
+            // "color-3": "#006C4C",
+            primary: "#006C4C", //#7DDAAA
+            secondary: "#99BDCA", //#006C4C
+            link: "#006C4C",
             medium: "#cfd8dc",
             white: "#fff",
             black: "#000",

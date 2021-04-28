@@ -1,41 +1,42 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `Psycholog Biała Podlaska`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
-    icon: `/images/icon.png`,
-    titleImage: `/images/wall.png`,
+    icon: `/images/icon2.png`,
+    titleImage: `/images/5.jpg`,
     ogImage: `/images/wall.png`,
+    personImage: `/images/AnnaHumin.jpg`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `Anna Humin`,
+    description: `Pomoc psychologiczna dla dzieci i dorosłych, psychoterapia, terapia małżeńska, psychoedukacja, pomoc psychologiczna dla dziecka w zaburzeniach emocjonalnych i wychowawczych.`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
+        "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Prowadzę terapię indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, terapię małżeńską oraz terapię w dolegliwościach psychosomatycznych.",
     author: `@_akzhy`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
-    switchTheme: true,
+    darkmode: false,
+    switchTheme: false,
     navLinks: [
         {
-            name: "HOME",
+            name: "Strona główna",
             url: "/",
         },
         {
-            name: "ABOUT",
-            url: "/about",
+            name: "O mnie",
+            url: "/o-mnie",
         },
         {
-            name: "BLOG",
+            name: "Blog",
             url: "/blog",
         },
+        // {
+        //     name: "PORTFOLIO",
+        //     url: "/portfolio",
+        // },
         {
-            name: "PORTFOLIO",
-            url: "/portfolio",
-        },
-        {
-            name: "CONTACT",
+            name: "Kontakt",
             url: "/contact",
         },
     ],
@@ -44,10 +45,10 @@ const siteMetadata = {
             name: "PRIVACY POLICY",
             url: "/privacy-policy",
         },
-        {
-            name: "GitHub",
-            url: "https://github.com/akzhy/gatsby-starter-elemental",
-        },
+        // {
+        //     name: "GitHub",
+        //     url: "https://github.com/akzhy/gatsby-starter-elemental",
+        // },
     ],
     social: [
         {
@@ -55,21 +56,7 @@ const siteMetadata = {
             icon: "/images/Facebook.svg",
             url: "#",
         },
-        {
-            name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "#",
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#",
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "#",
-        },
+
     ],
     contact: {
         // leave empty ('') or false to hide form

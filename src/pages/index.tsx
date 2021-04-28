@@ -11,9 +11,14 @@ import ItemPortfolio from "../components/item-portfolio"
 import ItemBlog from "../components/item-blog"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
+import RoundedImage from "../components/roundedImage"
+import { siteMetadata } from "../../config"
+
+
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
+    
 
     const portfolioList = data.portfolio.edges.map((item, _) => (
         <ItemPortfolio
@@ -31,14 +36,14 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Home",
+                title: "Psycholog",
                 description: siteData.description,
             }}
             navPlaceholder={false}
             location={location}
         >
             <Wall data={siteData} />
-            {siteData.about !== "" && <About data={siteData.about} />}
+            <About data={siteData} />
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
@@ -87,21 +92,22 @@ const Wall = ({ data }) => {
                         data.capitalizeTitleOnHome ? "uppercase" : ""
                     }`}
                 >
-                    <span {...spanAttrs}></span>
-                    {data.title}
+                    <span  {...spanAttrs}></span>
+                    Gabinet psychologiczny
                 </h1>
             </div>
-            <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">
+            {/* <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0 mt-2">
                 {data.introTag}
-            </p>
+            </p> */}
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
-            <ScrollIntoView selector="#portfolio">
+            
                 <Button
-                    title="SEE WORKS"
-                    type="button"
+                    to="https://www.znanylekarz.pl/anna-humin/psycholog/biala-podlaska"
+                    label={`ZnanyLekarz`}
+                    title="Zapisz się na wizytę"
                     iconRight={<ArrowRight />}
                 />
-            </ScrollIntoView>
+          
         </React.Fragment>
     )
 
@@ -144,12 +150,44 @@ const Wall = ({ data }) => {
 const About = ({ data }) => {
     return (
         <div className="boxed">
-            <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
+
+            <div className="px-4 py-10 text-center lg:py-20 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    About
+                    O mnie
                 </h2>
-                <p className="mt-5 text-lg">{data}</p>
+                <div className="md:flex items-center" >
+
+                    <RoundedImage src={data.personImage} />
+
+                    <div className="text-left text-lg">
+                        <p>Dzień dobry!</p> 
+                        <p>Nazywam się Anna Humin. Jestem psychologiem z 30 letnim doświadczeniem zawodowym. </p> 
+                        
+                        <h3>Specjalizuję się szczególnie w obszarach:</h3>
+                        
+                        <ul className="list-disc pl-10">
+                            <li>trudności wychowawczych</li>
+                            <li>edukacji i treningu <strong>umiejętności komunikacji interpersonalnych</strong> - sprzyjających budowaniu relacji w rodzinie i poza rodziną </li>
+                            <li>radzeniu sobie z emocjami i edukacji w zakresie funkcji emocji w rozwoju osobistym</li>
+                            <li>usuwania <strong>dolegliwości psychosomatycznych </strong>(tiki nerwowe, bóle głowy, bóle brzucha, jąkanie, moczenie mimowolne itp.)</li>
+                            <li>diagnozy sprawności intelektualnych dorosłych <strong>metodą WAIS </strong></li>
+                        </ul>
+                        <h3>Moje motta:</h3>
+                        <p>"Chcesz zmienić czy zrozumieć świat? Zacznij od siebie."</p>
+                        <p>"Pokochaj siebie a wszystko zacznie Ci sprzyjać!"</p>
+                        <Button
+                    to="/o-mnie"
+                    label={`O mnie`}
+                    title="Więcej o mnie"
+                    iconRight={<ArrowRight />} 
+                    />
+                    </div>
+                    
+
+
+                </div>
             </div>
+            
         </div>
     )
 }
@@ -163,6 +201,7 @@ const Blog = ({ children }) => {
                 </h2>
             </div>
             <div className="flex flex-wrap">{children}</div>
+        
         </div>
     )
 }
@@ -203,6 +242,7 @@ export const query = graphql`
                 capitalizeTitleOnHome
                 titleImage
                 ogImage
+                personImage
                 twoColumnWall
                 introTag
                 description

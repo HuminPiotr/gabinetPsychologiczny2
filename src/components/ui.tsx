@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "./utils"
+import { Link } from "gatsby"
 
 type ButtonProps = { title: string, to?: string, type?: any, label?: string, disabled?: boolean, iconLeft?: JSX.Element, iconRight?: JSX.Element };
 const Button: React.FC<ButtonProps> = props => {

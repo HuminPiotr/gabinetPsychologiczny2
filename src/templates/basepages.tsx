@@ -17,7 +17,7 @@ export default function basePages({ data, location }: PageProps<BasePagesQuery, 
                 <div className="title py-12 text-center">
                     <h2 className="font-black text-5xl text-color-1">{data.mdx.frontmatter.title}</h2>
                 </div>
-                <div className="post-content px-4 lg:px-24 md:px-8 pb-12">
+                <div className="post-content flex px-4 lg:px-24 md:px-8 pb-12">
                     <MDXProvider>
                         <MDXRenderer>{data.mdx.body}</MDXRenderer>
                     </MDXProvider>
