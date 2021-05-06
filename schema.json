@@ -15467,6 +15467,16 @@
               "defaultValue": null
             },
             {
+              "name": "helpImage",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "twoColumnWall",
               "description": "",
               "type": {
@@ -16150,6 +16160,18 @@
               "deprecationReason": null
             },
             {
+              "name": "helpImage",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "twoColumnWall",
               "description": null,
               "args": [],
@@ -16737,6 +16759,12 @@
             },
             {
               "name": "siteMetadata___personImage",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "siteMetadata___helpImage",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

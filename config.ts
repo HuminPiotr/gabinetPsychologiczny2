@@ -7,6 +7,7 @@ const siteMetadata = {
     titleImage: `/images/5.jpg`,
     ogImage: `/images/wall.png`,
     personImage: `/images/AnnaHumin.jpg`,
+    helpImage: `/images/woman.png`,
     twoColumnWall: true,
     cookiePolicy: true,
     introTag: `Anna Humin`,
@@ -15,7 +16,7 @@ const siteMetadata = {
         "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Prowadzę terapię indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, terapię małżeńską oraz terapię w dolegliwościach psychosomatycznych.",
     author: `@_akzhy`,
     blogItemsPerPage: 10,
-    portfolioItemsPerPage: 10,
+    portfolioItemsPerPage: 2,
     darkmode: false,
     switchTheme: false,
     navLinks: [
@@ -37,7 +38,7 @@ const siteMetadata = {
         // },
         {
             name: "Kontakt",
-            url: "/contact",
+            url: "/kontakt",
         },
     ],
     footerLinks: [

@@ -28,6 +28,7 @@ export interface IndexPageQuery_site_siteMetadata {
   titleImage: string | null;
   ogImage: string | null;
   personImage: string | null;
+  helpImage: string | null;
   twoColumnWall: boolean | null;
   introTag: string | null;
   about: string | null;

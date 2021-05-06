@@ -44,6 +44,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         >
             <Wall data={siteData} />
             <About data={siteData} />
+            <Help data={siteData} />
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
@@ -192,6 +193,30 @@ const About = ({ data }) => {
     )
 }
 
+const Help = ( {data} ) => {
+    return (
+        <div className="boxed relative">
+            <img src={data.helpImage} className="hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10"/>
+            <div className="px-4 py-10 text-left lg:py-20 lg:px-0">
+                <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
+                    W czym mogę Ci pomóc?
+                </h2>
+                <ul className="list-disc pl-10">
+                    <li>Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
+                    <li>Psychoterapia rodzinna, dzieci, indywidualna i grupowa</li>
+                    <li>Diagnoza psychologiczna, wydawanie opinii psychologicznych</li>
+                    <li>Interwencja kryzysowa</li>
+                    <li>Stres</li>
+                    <li>Niska samoocena</li>
+                    <li>Niepewność siebie</li>
+                    <li>Depresja</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+
 const Blog = ({ children }) => {
     return (
         <div className="container mx-auto px-0">
@@ -243,6 +268,7 @@ export const query = graphql`
                 titleImage
                 ogImage
                 personImage
+                helpImage
                 twoColumnWall
                 introTag
                 description
