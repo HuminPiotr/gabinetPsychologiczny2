@@ -91,7 +91,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
         })
 
 
-        const portfolioItems = result.data.portfolio.edges
+        const portfolioItems = result.data.wpis.edges
         const portfolioItemsPerPage =
             result.data.limitPost.siteMetadata.portfolioItemsPerPage
         const numPortfolioItems = Math.ceil(portfolioItems.length / portfolioItemsPerPage)
