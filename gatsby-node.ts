@@ -46,7 +46,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
                     }
                 }
             }
-            portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }) {
+            wpis: allMdx(filter: { fields: { sourceName: { eq: "wpis" } } }) {
                 edges {
                     node {
                         id
@@ -98,8 +98,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 
         Array.from({ length: numPortfolioItems }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/portfolio` : `/portfolio/${i + 1}`,
-                component: path.resolve("./src/templates/portfolio-list.tsx"),
+                path: i === 0 ? `/` : `/${i + 1}`,
+                component: path.resolve("./src/templates/wpis-list.tsx"),
                 context: {
                     limit: portfolioItemsPerPage,
                     skip: i * portfolioItemsPerPage,

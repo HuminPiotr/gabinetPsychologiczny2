@@ -20,7 +20,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
     
 
-    const portfolioList = data.portfolio.edges.map((item, _) => (
+    const portfolioList = data.wpis.edges.map((item, _) => (
         <ItemPortfolio
             data={item.node}
             key={`p-item-index-${item.node.id}`}
@@ -31,7 +31,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const blogList = data.blog.edges.map(item => (
         <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
     ))
-
+        console.log(blogList)
     return (
         <Layout
             front={true}
@@ -43,12 +43,12 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             location={location}
         >
             <Wall data={siteData} />
-            <About data={siteData} />
             <Help data={siteData} />
+            <About data={siteData} />
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
             </div>
-            <Blog>{blogList}</Blog>
+           {blogList.length ? <Blog>{blogList}</Blog> : null} 
             <Contact data={siteData.contact} />
         </Layout>
     )
@@ -237,7 +237,7 @@ const Contact = ({ data }) => {
         <div className="container mx-auto">
             <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Contact
+                    Kontakt
                 </h2>
             </div>
             <div className="flex flex-wrap pb-40">
@@ -287,8 +287,8 @@ export const query = graphql`
                 }
             }
         }
-        portfolio: allMdx(
-            filter: { fields: { sourceName: { eq: "portfolio" } } }
+        wpis: allMdx(
+            filter: { fields: { sourceName: { eq: "wpis" } } }
             limit: 6
         ) {
             edges {

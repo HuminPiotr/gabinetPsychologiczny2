@@ -28,10 +28,10 @@ const siteMetadata = {
             name: "O mnie",
             url: "/o-mnie",
         },
-        {
-            name: "Blog",
-            url: "/blog",
-        },
+        // {
+        //     name: "Blog",
+        //     url: "/blog",
+        // },
         // {
         //     name: "PORTFOLIO",
         //     url: "/portfolio",
@@ -55,17 +55,17 @@ const siteMetadata = {
         {
             name: "Facebook",
             icon: "/images/Facebook.svg",
-            url: "#",
+            url: "https://www.facebook.com/Psycholog-Anna-Humin-100682741678299",
         },
 
     ],
     contact: {
         // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation",
+        api_url: "https://getform.io/f/942f7963-951e-448e-be29-6154eaa9b644",
+        description: `Masz do mnie pytanie? Chcesz zapisać się na wizytę? Zapraszam do kontaktu.`,
+        mail: "anna.humin2@wp.pl",
+        phone: "669-291-602",
+        address: "21-500 \nBiała Podlaska \nul. Czerwińskiego 4",
     },
     disqus: "elemental-netlify-com",
 }
@@ -81,21 +81,21 @@ const beforeContactFormSubmit = data => {
     if (data.name.trim().length < 2) {
         errors.push({
             code: 1,
-            message: "Enter a name",
+            message: "Wpisz imię",
         })
     }
 
     if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
         errors.push({
             code: 2,
-            message: "Enter a valid email address",
+            message: "Wpisz poprawny adres email",
         })
     }
 
     if (data.message.trim().length < 15) {
         errors.push({
             code: 3,
-            message: "Enter a message with atleast 15 characters",
+            message: "Wiadomość musi składać się z przynajmniej 15 znaków",
         })
     }
 

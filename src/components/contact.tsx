@@ -39,14 +39,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                                 4: {
                                     type: "success",
                                     message:
-                                        "Your message has been sent.",
+                                        "Twoja wiadomość została wysłana",
                                 },
                             })
                         } else {
                             setFeedback({
                                 4: {
                                     message:
-                                        "There was an error sending the message. Please try again.",
+                                        "Nie udało się wysłać wiadomości. Spróbuj jescze raz",
                                 },
                             })
                         }
@@ -55,7 +55,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                         setFeedback({
                             4: {
                                 message:
-                                    "There was an error sending the message. Please try again.",
+                                    "Nie udało się wysłać wiadomości. Spróbuj jescze raz",
                             },
                         })
                         setTransactionState(false);
@@ -73,7 +73,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             }}
         >
             <TextInput
-                label="Name"
+                label="Imię"
                 name="name"
                 onChange={e =>
                     updateData({
@@ -106,7 +106,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 }
             />
             <TextInput
-                label="Message"
+                label="Wiadomość"
                 name="message"
                 type="textarea"
                 onChange={e =>
@@ -131,7 +131,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
                 <Button
                     type="button,submit"
-                    title="Send"
+                    title="Wyślij"
                     disabled={transactionState}
                     iconRight={<IconRight spin={transactionState}/>}
                 />
