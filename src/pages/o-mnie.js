@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, PageProps } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import RoundedImage from "../components/roundedImage"
@@ -8,7 +8,7 @@ import RoundedImage from "../components/roundedImage"
 export default ({ data,location }) => {
 
     const siteData = data.site.siteMetadata;
-    console.log(data);
+
     return (
         <Layout
             seo={{

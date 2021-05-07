@@ -28,10 +28,10 @@ const siteMetadata = {
             name: "O mnie",
             url: "/o-mnie",
         },
-        // {
-        //     name: "Blog",
-        //     url: "/blog",
-        // },
+        {
+            name: "Blog",
+            url: "/blog",
+        },
         // {
         //     name: "PORTFOLIO",
         //     url: "/portfolio",
