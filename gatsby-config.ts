@@ -23,13 +23,13 @@ const plugins = [
             path: `${__dirname}/contents/wpis/`,
         },
     },
-    {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-            name: `basepages`,
-            path: `${__dirname}/contents/basepages`,
-        },
-    },
+    // {
+    //     resolve: `gatsby-source-filesystem`,
+    //     options: {
+    //         name: `basepages`,
+    //         path: `${__dirname}/contents/basepages`,
+    //     },
+    // },
     {
         resolve: `gatsby-plugin-mdx`,
         options: {
