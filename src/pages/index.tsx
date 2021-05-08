@@ -31,7 +31,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const blogList = data.blog.edges.map(item => (
         <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
     ))
-        console.log(blogList)
+  
     return (
         <Layout
             front={true}
@@ -89,7 +89,7 @@ const Wall = ({ data }) => {
         <React.Fragment>
             <div className="title bg-bg">
                 <h1
-                    className={`text-6xl relative lg:text-7xl ${
+                    className={`pb-4 text-4xl relative lg:text-7xl ${
                         data.capitalizeTitleOnHome ? "uppercase" : ""
                     }`}
                 >
@@ -203,8 +203,8 @@ const Help = ( {data} ) => {
                 </h2>
                 <ul className="list-disc pl-10">
                     <li>Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
-                    <li>Psychoterapia rodzinna, dzieci, indywidualna i grupowa</li>
-                    <li>Diagnoza psychologiczna, wydawanie opinii psychologicznych</li>
+                    <li>Psychoterapia rodzinna, indywidualna i grupowa</li>
+                    <li>Diagnoza sprawności intelektualnych dorosłych, wydawanie opinii psychologicznych</li>
                     <li>Interwencja kryzysowa</li>
                     <li>Stres</li>
                     <li>Niska samoocena</li>

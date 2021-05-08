@@ -11,7 +11,7 @@ const siteMetadata = {
     twoColumnWall: true,
     cookiePolicy: true,
     introTag: `Anna Humin`,
-    description: `Pomoc psychologiczna dla dzieci i dorosłych, psychoterapia, terapia małżeńska, psychoedukacja, pomoc psychologiczna dla dziecka w zaburzeniach emocjonalnych i wychowawczych.`,
+    description: `Pomoc psychologiczna dla dorosłych i młodzieży, psychoterapia, terapia małżeńska, psychoedukacja, pomoc psychologiczna dla dziecka w zaburzeniach emocjonalnych i wychowawczych.`,
     about:
         "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Prowadzę terapię indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, terapię małżeńską oraz terapię w dolegliwościach psychosomatycznych.",
     author: `@_akzhy`,
@@ -42,10 +42,10 @@ const siteMetadata = {
         },
     ],
     footerLinks: [
-        {
-            name: "PRIVACY POLICY",
-            url: "/privacy-policy",
-        },
+        // {
+        //     name: "PRIVACY POLICY",
+        //     url: "/privacy-policy",
+        // },
         // {
         //     name: "GitHub",
         //     url: "https://github.com/akzhy/gatsby-starter-elemental",
@@ -61,7 +61,7 @@ const siteMetadata = {
     ],
     contact: {
         // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/942f7963-951e-448e-be29-6154eaa9b644",
+        api_url: "https://submit-form.com/d5XZRW5A",
         description: `Masz do mnie pytanie? Chcesz zapisać się na wizytę? Zapraszam do kontaktu.`,
         mail: "anna.humin2@wp.pl",
         phone: "669-291-602",

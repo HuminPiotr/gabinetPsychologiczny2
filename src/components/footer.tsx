@@ -11,18 +11,15 @@ export default function() {
             site {
                 siteMetadata {
                     title
-                    footerLinks {
-                        name
-                        url
-                    }
+
                 }
             }
         }
     `)
 
-    const footerLinks = query.site.siteMetadata.footerLinks.map((item, _) => (
-        <ListItem data={item} key={`footer-n-l-${_}`} />
-    ))
+    // const footerLinks = query.site.siteMetadata.footerLinks.map((item, _) => (
+    //     <ListItem data={item} key={`footer-n-l-${_}`} />
+    // ))
 
     return (
         <footer className="footer bg-bgalt py-12">
@@ -39,11 +36,11 @@ export default function() {
                     className="text-color-2 my-3"
                 >
                     <ul>
-                    {footerLinks} 
+                    {/* {footerLinks}  */}
                     </ul>
                 </div>
                 <p className="text-color-default text-lg">
-                    Copyright &copy; {query.site.siteMetadata.title}{" "}
+                    Copyright &copy; {query.site.siteMetadata.title}{" Anna Humin "}
                     {new Date().getFullYear()}
                 </p>
             </div>

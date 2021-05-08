@@ -16,7 +16,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         email: "",
         message: "",
     })
-
+    console.log(api)
     const [feedback, setFeedback] = useState<FeedbackState>({})
 
     const [ transactionState, setTransactionState] = useState(false);
@@ -34,6 +34,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 if (validate.result) {
                     setFeedback({});
                     contactFormSubmit(api, validate.data).then(res => {
+                        console.log(res)
                         if (res.result) {
                             setFeedback({
                                 4: {
@@ -46,7 +47,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                             setFeedback({
                                 4: {
                                     message:
-                                        "Nie udało się wysłać wiadomości. Spróbuj jescze raz",
+                                        "Nie udało się wysłać wiadomości. Spróbuj jeszcze raz.",
                                 },
                             })
                         }
