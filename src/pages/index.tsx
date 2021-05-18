@@ -106,7 +106,7 @@ const Wall = ({ data }) => {
                     to="https://www.znanylekarz.pl/anna-humin/psycholog/biala-podlaska"
                     label={`ZnanyLekarz`}
                     title="Zapisz się na wizytę"
-                    iconRight={<ArrowRight />}
+                    
                 />
           
         </React.Fragment>
