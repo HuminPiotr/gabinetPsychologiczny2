@@ -116,27 +116,27 @@ const beforeContactFormSubmit = data => {
 }
 
 const contactFormSubmit = async (api, data) => {
-    // let res: any = await fetch(api, {
-    //     method: "POST",
-    //     body: JSON.stringify(data),
-    //     headers: {
-    //         Accept: "application/json",
-    //         "Content-Type": "application/json",
-    //     },
-    // })
+    let res: any = await fetch(api, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+    })
 
-    // res = await res.json()
+    res = await res.json()
 
-    // if (res.success) {
-    //     return {
-    //         result: true,
-    //     }
-    // }
-    // return {
-    //     result: false,
-    //     ...res,
-    // }
-    return {result: true};
+    if (res.success) {
+        return {
+            result: true,
+        }
+    }
+    return {
+        result: false,
+        ...res,
+    }
+    
 }
 
 const defaults = {

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 
 import Layout from "../components/layout"
-import { Form, Description } from "../components/contact"
+import { Form, Description } from "../components/contact2"
 import { ContactQuery } from "./__generated__/ContactQuery"
 
 export default ({data, location}: PageProps<ContactQuery>) => {

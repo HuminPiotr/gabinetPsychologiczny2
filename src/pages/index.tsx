@@ -9,7 +9,7 @@ import { Button } from "../components/ui"
 
 import ItemPortfolio from "../components/item-portfolio"
 import ItemBlog from "../components/item-blog"
-import { Form, Description as ContactDescription } from "../components/contact"
+import { Form, Description as ContactDescription } from "../components/contact2"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import RoundedImage from "../components/roundedImage"
 import { siteMetadata } from "../../config"
