@@ -10,6 +10,11 @@ import { ContactQuery_site_siteMetadata_contact } from "../pages/__generated__/C
 
 type FeedbackState = { [id: number]: { message?: string, type?: string }}
 
+const handleSubmit = (e) => {
+    e.preventDefault();
+}
+
+
 const Form: React.FC<{ api: string }> = ({ api }) => {
     const [data, changeData] = useState({
         name: "",
@@ -25,7 +30,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
     return (
         <form
-            name="contact" data-netlify="true" method="POST"
+            name="contact" data-netlify="true" method="POST" onSubmit={handleSubmit}
         >
             <TextInput
                 label="Imię"
