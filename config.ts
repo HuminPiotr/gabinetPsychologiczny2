@@ -61,7 +61,7 @@ const siteMetadata = {
     ],
     contact: {
         // leave empty ('') or false to hide form
-        api_url: "https://submit-form.com/d5XZRW5A",
+        api_url: "/",
         description: `Masz do mnie pytanie? Chcesz zapisać się na wizytę? Zapraszam do kontaktu.`,
         mail: "anna.humin2@wp.pl",
         phone: "669-291-602",
@@ -116,12 +116,12 @@ const beforeContactFormSubmit = data => {
 }
 
 const contactFormSubmit = async (api, data) => {
-    let res: any = await fetch(api, {
+    let res: any = await fetch("/", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+
         },
     })
 
@@ -136,6 +136,7 @@ const contactFormSubmit = async (api, data) => {
         result: false,
         ...res,
     }
+
     
 }
 

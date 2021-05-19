@@ -33,13 +33,14 @@ const Button: React.FC<ButtonProps> = props => {
     )
 }
 
-const TextInput = ({ label, type = "text", name, onChange, footer }) => {
+const TextInput = ({ label, type = "text", name, value, onChange, footer }) => {
     const [focused, changeFocused] = useState(false)
 
     let elem = (
         <input
             type={type}
             name={name}
+            value={value}
             className="block w-full outline-none px-4 py-2 focus:outline-none bg-bg text-color-default"
             onFocus={() => changeFocused(true)}
             onBlur={() => changeFocused(false)}
