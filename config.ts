@@ -129,8 +129,8 @@ const contactFormSubmit = async (e, data) => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...data})
         })
-            .then( () => console.log('Success!'))
-            .catch( error => console.log(error) );
+            .then( () =>  true)
+            .catch( () => false );
     }
     e.preventDefault();
 

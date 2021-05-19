@@ -74,11 +74,6 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         e.preventDefault();
     }
     
-    const encode = (data) => {
-        return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-    }
 
 
     return (
