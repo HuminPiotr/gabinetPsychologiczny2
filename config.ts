@@ -132,6 +132,7 @@ const contactFormSubmit = async (e, data) => {
             .then( () => console.log('Success!'))
             .catch( error => console.log(error) );
     }
+    e.preventDefault();
 
     // res = await res.json()
   
