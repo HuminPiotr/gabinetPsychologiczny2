@@ -64,6 +64,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
     }
     
     const handleSubmit = e => {
+        e.preventDefault();
         const data = beforeContactFormSubmit(formState);
 
         assignComunicates(data);
@@ -71,7 +72,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
 
 
-        e.preventDefault();
+       
     }
     
 
