@@ -130,7 +130,11 @@ const contactFormSubmit = async (e, data) => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...data})
         })
-            .then( () =>  console.log("Wiadomość została wysłana"))
+            .then( res => {
+                if (res){
+                    alert('Succes!');
+                }
+            })
             .catch( (error) => console.log(error) );
     }
     
