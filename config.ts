@@ -123,6 +123,7 @@ const encode = (data) => {
 
 const contactFormSubmit = async (e, data) => {
     console.log(data)
+    e.preventDefault();
     if(data.result){    
         let res: any = await fetch("/", {
             method: "POST",
@@ -132,7 +133,7 @@ const contactFormSubmit = async (e, data) => {
             .then( () =>  console.log("Wiadomość została wysłana"))
             .catch( (error) => console.log(error) );
     }
-    e.preventDefault();
+    
 
     // res = await res.json()
   
