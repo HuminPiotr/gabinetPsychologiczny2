@@ -18,22 +18,58 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         message: "",
     })
 
+    const [comunicates, setComunicates] = useState({
+        result: "",
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    const assignComunicates = (data) => {
+        console.log(data.errors)
+
+
+   
+        if(data.result){
+            setComunicates({
+                ...comunicates,
+                result: "Wiadomość została wysłana.",
+            })
+        }
+        else{
+            setComunicates({
+                ...comunicates,
+                result: "",
+            })
+        }
+        
+        if(data.errors.length > 0){
+            data.errors.forEach( (item) => {
+                setComunicates({
+                    [item.code]: item.message,
+                })
+                
+            })
+        }
+        
+    }
+
+
     const handleChange = e => {
-        // console.log('change');
         setFormState({
             ...formState,
             [e.target.name]: e.target.value,
         })
+        e.preventDefault();
     }
     
     const handleSubmit = e => {
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...formState})
-        })
-            .then( () => alert('Success!'))
-            .catch( error => alert(error) );
+        const data = beforeContactFormSubmit(formState);
+
+        assignComunicates(data);
+        contactFormSubmit(e, data);
+
+
 
         e.preventDefault();
     }
@@ -52,6 +88,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             method="POST" 
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            noValidate
         >
             <input type="hidden" name="form-name" value="contact" />
             <TextInput
@@ -59,6 +96,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 name="name"
                 value={formState.name}
                 onChange={handleChange}
+                footer={comunicates.name}
             />
             <TextInput
                 label="Email"
@@ -66,6 +104,8 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 type="email"
                 value={formState.email}
                 onChange={handleChange}
+                footer={comunicates.email}
+                
             />
             <TextInput
                 label="Message"
@@ -73,6 +113,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 type="textarea"
                 value={formState.message}
                 onChange={handleChange}
+                footer={comunicates.message}
 
             />
             <div className="py-3 lg:p-4">

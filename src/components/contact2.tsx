@@ -7,93 +7,80 @@ import { beforeContactFormSubmit, contactFormSubmit } from "../../config"
 
 import SocialLinks from "../utils/sociallinks"
 import { ContactQuery_site_siteMetadata_contact } from "../pages/__generated__/ContactQuery"
+import { encode } from "punycode"
 
-type FeedbackState = { [id: number]: { message?: string, type?: string }}
-
-const handleSubmit = (e) => {
-    e.preventDefault();
-}
 
 
 const Form: React.FC<{ api: string }> = ({ api }) => {
-    const [data, changeData] = useState({
+    const [formState, setFormState] = useState({
         name: "",
         email: "",
         message: "",
     })
-    console.log(api)
-    const [feedback, setFeedback] = useState<FeedbackState>({})
 
-    const [ transactionState, setTransactionState] = useState(false);
+    const handleChange = e => {
+        // console.log('change');
+        setFormState({
+            ...formState,
+            [e.target.name]: e.target.value,
+        })
+    }
+    
+    const handleSubmit = e => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formState})
+        })
+            .then( () => alert('Success!'))
+            .catch( error => alert(error) );
 
-    const updateData = v => changeData({ ...data, ...v })
+        e.preventDefault();
+    }
+    
+    const encode = (data) => {
+        return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    }
+
 
     return (
-        <form
-            name="contact" data-netlify="true" method="POST" onSubmit={handleSubmit}
+        <form 
+            onSubmit={handleSubmit} 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
         >
+            <input type="hidden" name="form-name" value="contact" />
             <TextInput
-                label="Imię"
+                label="Name"
                 name="name"
-                onChange={e =>
-                    updateData({
-                        name: e.target.value,
-                    })
-                }
-                footer={
-                    <FormMessage
-                        show={feedback[1] !== undefined}
-                        type="error"
-                        message={feedback[1]?.message}
-                    />
-                }
+                value={formState.name}
+                onChange={handleChange}
             />
             <TextInput
                 label="Email"
                 name="email"
                 type="email"
-                onChange={e =>
-                    updateData({
-                        email: e.target.value,
-                    })
-                }
-                footer={
-                    <FormMessage
-                        show={feedback[2] !== undefined}
-                        type="error"
-                        message={feedback[2]?.message}
-                    />
-                }
+                value={formState.email}
+                onChange={handleChange}
             />
             <TextInput
-                label="Wiadomość"
+                label="Message"
                 name="message"
                 type="textarea"
-                onChange={e =>
-                    updateData({
-                        message: e.target.value,
-                    })
-                }
-                footer={
-                    <FormMessage
-                        show={feedback[3] !== undefined}
-                        type="error"
-                        message={feedback[3]?.message}
-                    />
-                }
+                value={formState.message}
+                onChange={handleChange}
+
             />
             <div className="py-3 lg:p-4">
-                <FormMessage
-                    show={feedback[4] !== undefined}
-                    type={feedback[4]?.type || "error"}
-                    message={feedback[4]?.message}
-                />
 
                 <Button
                     type="button,submit"
-                    title="Wyślij"
-                    disabled={transactionState}
-                    iconRight={<IconRight spin={transactionState}/>}
+                    title="Send"
+
                 />
             </div>
         </form>

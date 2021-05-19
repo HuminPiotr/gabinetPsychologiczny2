@@ -80,21 +80,21 @@ const beforeContactFormSubmit = data => {
 
     if (data.name.trim().length < 2) {
         errors.push({
-            code: 1,
+            code: "name",
             message: "Wpisz imię",
         })
     }
 
     if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
         errors.push({
-            code: 2,
+            code: "email",
             message: "Wpisz poprawny adres email",
         })
     }
 
     if (data.message.trim().length < 15) {
         errors.push({
-            code: 3,
+            code: "message",
             message: "Wiadomość musi składać się z przynajmniej 15 znaków",
         })
     }
@@ -115,27 +115,36 @@ const beforeContactFormSubmit = data => {
     }
 }
 
-const contactFormSubmit = async (api, data) => {
-    let res: any = await fetch("/", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+const encode = (data) => {
+    return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
-        },
-    })
-
-    res = await res.json()
-
-    if (res.success) {
-        return {
-            result: true,
-        }
+const contactFormSubmit = async (e, data) => {
+    console.log(data)
+    if(data.result){    
+        let res: any = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...data})
+        })
+            .then( () => console.log('Success!'))
+            .catch( error => console.log(error) );
     }
-    return {
-        result: false,
-        ...res,
-    }
+
+    // res = await res.json()
+  
+
+    // if (res.success) {
+    //     return {
+    //         result: true,
+    //     }
+    // }
+    // return {
+    //     result: false,
+    //     ...res,
+    // }
 
     
 }

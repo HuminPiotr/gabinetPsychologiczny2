@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = props => {
     )
 }
 
-const TextInput = ({ label, type = "text", name, value, onChange, footer }) => {
+const TextInput = ({ label, type = "text", name, value, onChange, novalidate, footer }) => {
     const [focused, changeFocused] = useState(false)
 
     let elem = (
@@ -46,6 +46,7 @@ const TextInput = ({ label, type = "text", name, value, onChange, footer }) => {
             onBlur={() => changeFocused(false)}
             onChange={onChange}
             aria-label={name}
+        
         />
     )
 
@@ -77,9 +78,11 @@ const TextInput = ({ label, type = "text", name, value, onChange, footer }) => {
             <div className="bg-gradient-primary p-2px">
                 {elem}
             </div>
+     
             {footer && 
             <>{footer}</>
             }
+
         </div>
     )
 }
