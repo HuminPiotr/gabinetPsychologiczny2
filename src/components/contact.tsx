@@ -77,11 +77,10 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         else{
   
             contactFormSubmit(e, formState);
-            setComunicates({ result: "Wiadmość została wysłana"})
+            setComunicates({ result: "Wiadomość została wysłana"});
 
         }
 
-        console.log(comunicates)
 
        
     }

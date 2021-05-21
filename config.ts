@@ -122,7 +122,7 @@ const encode = (data) => {
 }
 
 const contactFormSubmit = async (e, data) => {
-
+    console.log(data);
     e.preventDefault();
     if(data.result){    
         let res: any = await fetch("/", {
