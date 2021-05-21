@@ -7,7 +7,7 @@ import { beforeContactFormSubmit, contactFormSubmit } from "../../config"
 
 import SocialLinks from "../utils/sociallinks"
 import { ContactQuery_site_siteMetadata_contact } from "../pages/__generated__/ContactQuery"
-import { encode } from "punycode"
+
 
 
 
@@ -25,12 +25,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         message: ""
     })
 
+
+
+
     const assignComunicates = (data) => {
-        console.log(data.errors)
 
+        const dataFormComunicates = data;
 
-   
-        if(data.result){
+        if(dataFormComunicates.result){
             setComunicates({
                 ...comunicates,
                 result: "Wiadomość została wysłana.",
@@ -42,15 +44,16 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 result: "",
             })
         }
-        
-        if(data.errors.length > 0){
-            data.errors.forEach( (item) => {
+
+        if(dataFormComunicates.errors.length > 0){
+            dataFormComunicates.errors.forEach( (item) => {
                 setComunicates({
                     [item.code]: item.message,
                 })
                 
             })
         }
+
         
     }
 
@@ -65,12 +68,20 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
     
     const handleSubmit = e => {
         e.preventDefault();
+
         const data = beforeContactFormSubmit(formState);
+        if(!data.result){
+            assignComunicates(data);
 
-        assignComunicates(data);
-        contactFormSubmit(e, data);
+        }
+        else{
+  
+            contactFormSubmit(e, data);
+            setComunicates({ result: "Wiadmość została wysłana"})
 
+        }
 
+        console.log(comunicates)
 
        
     }
@@ -88,7 +99,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
         >
             <input type="hidden" name="form-name" value="contact" />
             <TextInput
-                label="Name"
+                label="Imię"
                 name="name"
                 value={formState.name}
                 onChange={handleChange}
@@ -104,7 +115,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 
             />
             <TextInput
-                label="Message"
+                label="Wiadomość"
                 name="message"
                 type="textarea"
                 value={formState.message}
@@ -112,12 +123,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 footer={comunicates.message}
 
             />
+            
             <div className="py-3 lg:p-4">
-
+            <p className="text-color-1" >{comunicates.result}</p>
                 <Button
                     type="button,submit"
-                    title="Send"
-
+                    title="Wyślij"
+                   
+                    iconRight={<IconRight />}
                 />
             </div>
         </form>

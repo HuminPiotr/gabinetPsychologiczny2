@@ -42,6 +42,7 @@ module.exports = {
             "color-2": "#000",
             // "color-2": "#7DDAAA",
             "color-3": "#aeb4c5",
+            "color-4": "#B91C4F",
             // "color-3": "#006C4C",
             primary: "#006C4C", //#7DDAAA
             secondary: "#99BDCA", //#006C4C

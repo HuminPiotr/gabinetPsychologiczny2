@@ -78,10 +78,11 @@ const TextInput = ({ label, type = "text", name, value, onChange, novalidate, fo
             <div className="bg-gradient-primary p-2px">
                 {elem}
             </div>
-     
+            <p className="text-color-4">
             {footer && 
             <>{footer}</>
             }
+            </p>
 
         </div>
     )
