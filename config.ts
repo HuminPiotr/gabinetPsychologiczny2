@@ -117,30 +117,31 @@ const beforeContactFormSubmit = data => {
 
 const encode = (data) => {
     return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
 }
 
 const contactFormSubmit = async (e, data) => {
     console.log(data);
     e.preventDefault();
-     
-        let res: any = await fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...data})
+
+    let res: any = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data })
+    })
+        .then(res => {
+            if (res) {
+                // console.log('Succes!');
+                window.location.reload();
+            }
         })
-            .then( res => {
-                if (res){
-                    console.log('Succes!');
-                }
-            })
-            .catch( (error) => console.log(error) );
-    
-    
+        .catch((error) => console.log(error));
+
+
 
     // res = await res.json()
-  
+
 
     // if (res.success) {
     //     return {
@@ -152,7 +153,7 @@ const contactFormSubmit = async (e, data) => {
     //     ...res,
     // }
 
-    
+
 }
 
 const defaults = {
