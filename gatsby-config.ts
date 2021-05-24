@@ -10,6 +10,7 @@ const plugins = [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-codegen`,
     `gatsby-plugin-sitemap`,
+
     {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -56,6 +57,7 @@ const plugins = [
           ],
         },
       },
+    
 ]
 
 if (siteMetadata.disqus) {
