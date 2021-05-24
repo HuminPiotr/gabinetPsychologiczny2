@@ -1,6 +1,6 @@
 const siteMetadata = {
     title: `Psycholog Biała Podlaska`,
-    siteUrl: `http://localhost`,
+    siteUrl: `https://www.psycholog-biala-podlaska.pl/`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
     icon: `/images/icon2.png`,

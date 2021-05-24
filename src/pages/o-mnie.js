@@ -66,7 +66,8 @@ export default ({ data,location }) => {
                     </ul>
 
                     <h3>Prywatnie</h3>
-                    <p>Prywatnie jestem mężatką, mam 6 dorosłych dzieci i 13 wnucząt.</p>
+                    <p>Obecnie jestem emerytką zakochaną w swojej rodzinie i w samorozwoju. Jest to czas piękny w którym na nowo odkrywam siebię i coraz bardziej zachwyca mnie możliwość ciągłego wzrastania, doceniania tego co jest i co się wydarza.</p>
+                    <p>Lubię spotkania rodzinne, odkrywanie dobra w każdym człowieku, jego talentów i możliwości. Lubię tańczyć.</p>
                     <br/>
                     <p>Zapraszam Cię do mojego gabinetu.</p>
 

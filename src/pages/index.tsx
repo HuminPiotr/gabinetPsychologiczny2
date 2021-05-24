@@ -127,7 +127,7 @@ const Wall = ({ data }) => {
                     ></div>
                     <img
                         src={data.titleImage}
-                        alt=""
+                        alt="Tittle image"
                         className="h-full w-auto max-w-none lg:h-auto lg:w-full"
                     />
                 </div>
