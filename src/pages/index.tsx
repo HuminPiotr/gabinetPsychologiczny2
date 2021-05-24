@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 
 import { ArrowRight } from "react-feather"
-import ScrollIntoView from "react-scroll-into-view"
+
 
 import Layout from "../components/layout"
 import { Button } from "../components/ui"
@@ -12,7 +12,7 @@ import ItemBlog from "../components/item-blog"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import RoundedImage from "../components/roundedImage"
-import { siteMetadata } from "../../config"
+
 
 
 
