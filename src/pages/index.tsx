@@ -12,7 +12,7 @@ import ItemBlog from "../components/item-blog"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import RoundedImage from "../components/roundedImage"
-
+import ScrollIntoView from "react-scroll-into-view"
 
 
 
@@ -102,12 +102,14 @@ const Wall = ({ data }) => {
             </p> */}
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
             
+            <ScrollIntoView selector="#contact">
                 <Button
-                    to="https://www.znanylekarz.pl/anna-humin/psycholog/biala-podlaska"
                     label={`ZnanyLekarz`}
+                    type="button"
                     title="Zapisz się na wizytę"
                     
                 />
+            </ScrollIntoView>
           
         </React.Fragment>
     )
@@ -128,7 +130,7 @@ const Wall = ({ data }) => {
                     <img
                         src={data.titleImage}
                         alt="Tittle image"
-                        className="h-full w-auto max-w-none lg:h-auto lg:w-full"
+                        className="h-full w-auto max-w-none -ml-40 lg:h-auto lg:w-full md:ml-0"
                     />
                 </div>
                 <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
@@ -234,13 +236,13 @@ const Blog = ({ children }) => {
 const Contact = ({ data }) => {
     const hasContactForm = data.api_url
     return (
-        <div className="container mx-auto">
-            <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
+        <div className="container mx-auto" id="contact" >
+            <div className="pt-20 pb-10 lg:pt-30 lg:pb-5 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Kontakt
                 </h2>
             </div>
-            <div className="flex flex-wrap pb-40">
+            <div className="flex flex-wrap pb-40" >
                 {hasContactForm && (
                     <div className="w-full lg:w-1/2 px-4 lg:pl-2 lg:pr-6">
                         <Form api={data.api_url} />
