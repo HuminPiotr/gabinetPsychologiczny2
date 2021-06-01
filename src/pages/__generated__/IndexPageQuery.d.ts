@@ -40,6 +40,18 @@ export interface IndexPageQuery_site {
   siteMetadata: IndexPageQuery_site_siteMetadata | null;
 }
 
+export interface IndexPageQuery_wall_fluid {
+  tracedSVG: string | null;
+  aspectRatio: number;
+  src: string;
+  srcSet: string;
+  sizes: string;
+}
+
+export interface IndexPageQuery_wall {
+  fluid: IndexPageQuery_wall_fluid | null;
+}
+
 export interface IndexPageQuery_wpis_edges_node_frontmatter_image_childImageSharp_fluid {
   base64: string | null;
   aspectRatio: number;
@@ -129,6 +141,7 @@ export interface IndexPageQuery_blog {
 
 export interface IndexPageQuery {
   site: IndexPageQuery_site | null;
+  wall: IndexPageQuery_wall | null;
   wpis: IndexPageQuery_wpis;
   blog: IndexPageQuery_blog;
 }

@@ -2,6 +2,7 @@ import React from "react"
 
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import { LogoQuery } from "./__generated__/LogoQuery"
+import Image from 'gatsby-image';
 
 const Logo = ({ className = "logo" }) => {
     const data = useStaticQuery<LogoQuery>(graphql`
@@ -12,14 +13,25 @@ const Logo = ({ className = "logo" }) => {
                     logo
                 }
             }
+           logo: imageSharp(fluid: {src: {regex: "/logo/"}}) {
+                fluid{
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
         }
     `)
 
     return (
-        <img
-            src={data.site.siteMetadata.logo}
+        // <img
+        //     src={data.site.siteMetadata.logo}
+        //     alt={`${data.site.siteMetadata.title} - logo`}
+        //     className={className}
+        // />
+        <Image
+            fluid={data.logo.fluid}
             alt={`${data.site.siteMetadata.title} - logo`}
             className={className}
+
         />
     )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { graphql, PageProps } from "gatsby"
+import Image from 'gatsby-image'
 
 import { ArrowRight } from "react-feather"
 
@@ -42,8 +43,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             navPlaceholder={false}
             location={location}
         >
-            <Wall data={siteData} />
-            <Help data={siteData} />
+            <Wall data={data.wall} siteData={siteData} />
+            <Help data={data.help} />
             <About data={siteData} />
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
@@ -54,11 +55,11 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
     )
 }
 
-const Wall = ({ data }) => {
+const Wall = ({ data, siteData }) => {
     const wall = useRef(null)
-
-    const twoColumnWall = data.twoColumnWall
-
+    
+    const twoColumnWall = siteData.twoColumnWall;
+    console.log(twoColumnWall)
     const [state, changeState] = useState({
         loaded: false,
         supportsBlend: false,
@@ -78,9 +79,9 @@ const Wall = ({ data }) => {
 
     let spanAttrs: Partial<{ style: unknown }> = {}
 
-    if (!twoColumnWall && data.titleImage) {
+    if (!twoColumnWall && siteData.titleImage) {
         spanAttrs.style = {
-            backgroundImage: `url('${data.titleImage}')`,
+            backgroundImage: `url('${siteData.titleImage}')`,
         }
 
     }
@@ -90,7 +91,7 @@ const Wall = ({ data }) => {
             <div className="title bg-bg">
                 <h1
                     className={`pb-4 text-4xl relative lg:text-7xl ${
-                        data.capitalizeTitleOnHome ? "uppercase" : ""
+                        siteData.capitalizeTitleOnHome ? "uppercase" : ""
                     }`}
                 >
                     <span  {...spanAttrs}></span>
@@ -98,9 +99,9 @@ const Wall = ({ data }) => {
                 </h1>
             </div>
             {/* <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0 mt-2">
-                {data.introTag}
+                {siteData.introTag}
             </p> */}
-            <p className="text-base lg:text-lg mt-4">{data.description}</p>
+            <p className="text-base lg:text-lg mt-4">{siteData.description}</p>
             
             <ScrollIntoView selector="#contact">
                 <Button
@@ -122,16 +123,23 @@ const Wall = ({ data }) => {
             >
                 <div className="flex-1 lg:block absolute lg:relative w-full h-full top-0 left-0">
                     <div
-                        className="absolute left-0 top-0 w-full h-full lg:hidden"
+                        className="absolute left-0 top-0 w-full h-full lg:hidden z-10"
                         style={{
                             background: "rgba(0,0,0,.75)",
                         }}
                     ></div>
-                    <img
+                    {/* <img
                         src={data.titleImage}
                         alt="Tittle image"
                         className="h-full w-auto max-w-none -ml-40 lg:h-auto lg:w-full md:ml-0"
+                    /> */}
+                    {/* <div className="h-full w-auto max-w-none -ml-40 lg:h-auto lg:w-full md:ml-0"> */}
+                    <Image 
+                        fluid={data.fluid}
+                        alt="Psycholog zdjęcie tytułowe"
+                        className="h-full w-auto max-w-none  lg:h-auto lg:w-full  z-0"
                     />
+                    {/* </div> */}
                 </div>
                 <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                     {innerComponents}
@@ -160,7 +168,7 @@ const About = ({ data }) => {
                 </h2>
                 <div className="md:flex items-center" >
 
-                    <RoundedImage src={data.personImage} />
+                    <RoundedImage/>
 
                     <div className="text-left text-lg">
                         <p>Dzień dobry!</p> 
@@ -196,9 +204,12 @@ const About = ({ data }) => {
 }
 
 const Help = ( {data} ) => {
+    console.log(data);
     return (
         <div className="boxed relative">
-            <img src={data.helpImage} className="hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10"/>
+            <div className="imageContainer hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10">
+                <Image fluid={data.fluid} />
+            </div>
             <div className="px-4 py-10 text-left lg:py-20 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     W czym mogę Ci pomóc?
@@ -289,6 +300,18 @@ export const query = graphql`
                 }
             }
         }
+        wall:   imageSharp(fluid: {src: {regex: "/wallImage/"}}) {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+
+        help: imageSharp(fluid: {src: {regex: "/woman/"}}) {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+
         wpis: allMdx(
             filter: { fields: { sourceName: { eq: "wpis" } } }
             limit: 6
