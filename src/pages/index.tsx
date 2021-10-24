@@ -95,12 +95,12 @@ const Wall = ({ data, siteData }) => {
                     }`}
                 >
                     <span  {...spanAttrs}></span>
-                    Gabinet psychologiczny
+                    Psycholog - Biała Podlaska
                 </h1>
             </div>
-            {/* <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0 mt-2">
-                {siteData.introTag}
-            </p> */}
+            <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0 mt-2">
+                {/* {siteData.introTag} */}
+            </p>
             <p className="text-base lg:text-lg mt-4">{siteData.description}</p>
             
             <ScrollIntoView selector="#contact">

@@ -29,7 +29,7 @@ const Logo = ({ className = "logo" }) => {
         // />
         <Image
             fluid={data.logo.fluid}
-            alt={`${data.site.siteMetadata.title} - logo`}
+            alt="Anna Humin Gabinet psychologiczny"
             className={className}
 
         />

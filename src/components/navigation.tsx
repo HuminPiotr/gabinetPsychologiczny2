@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                 <SideBar open={sidebarOpen} onChange={setSidebarOpen}>
                     <div className="bg-bg h-full flex flex-col justify-center relative">
                         <div className="absolute top-0 my-4 text-center w-full">
-                            <Link to="/" title={data.site.siteMetadata.title} className="inline-block">
+                            <Link to="/"  className="inline-block">
                                 <Logo
                                     className={`duration-300 transition-all ${
                                         scrolled ? "w-8" : "w-12"
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                         </div>
                     </div>
                 </SideBar>
-                <Link to="/" title={data.site.siteMetadata.title}>
+                <Link to="/" >
                     <Logo
                         className={`duration-300 transition-all ${
                             scrolled ? "w-8" : "w-12"

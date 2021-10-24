@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Psycholog Biała Podlaska`,
+    title: `Anna Humin Psycholog Biała Podlaska`,
     siteUrl: `https://www.psycholog-biala-podlaska.pl/`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -122,7 +122,6 @@ const encode = (data) => {
 }
 
 const contactFormSubmit = async (e, data) => {
-    console.log(data);
     e.preventDefault();
 
     let res: any = await fetch("/", {

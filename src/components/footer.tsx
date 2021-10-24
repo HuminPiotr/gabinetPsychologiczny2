@@ -35,9 +35,7 @@ export default function() {
                 <div
                     className="text-color-2 my-3"
                 >
-                    <ul>
-                    {/* {footerLinks}  */}
-                    </ul>
+                 
                 </div>
                 <p className="text-color-default text-lg">
                     Copyright &copy; {query.site.siteMetadata.title}{" Anna Humin "}
