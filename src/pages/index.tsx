@@ -20,7 +20,6 @@ import ScrollIntoView from "react-scroll-into-view"
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
     
-
     const portfolioList = data.wpis.edges.map((item, _) => (
         <ItemPortfolio
             data={item.node}

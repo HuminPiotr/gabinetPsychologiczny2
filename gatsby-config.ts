@@ -75,6 +75,14 @@ const plugins = [
           },
         },
       },
+      {
+          resolve: 'gatsby-plugin-robots-txt',
+          options: {
+            host: 'https://www.psycholog-biala-podlaska.pl',
+            sitemap: 'https://www.psycholog-biala-podlaska.pl/sitemap.xml',
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+      }
     
 ]
 

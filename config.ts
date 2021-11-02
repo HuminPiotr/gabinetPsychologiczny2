@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Anna Humin Psycholog Biała Podlaska`,
+    title: `Anna Humin Gabinet Psychologiczny`,
     siteUrl: `https://www.psycholog-biala-podlaska.pl/`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
