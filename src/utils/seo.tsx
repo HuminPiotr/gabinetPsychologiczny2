@@ -24,6 +24,31 @@ function SEO({ description, lang, meta, title, image }: SEOProps) {
     const metaDescription = description || site.siteMetadata.description
     const ogImage = image || site.siteMetadata.ogImage
 
+    const breadcrumb = {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Biała Podlaska",
+        "streetAddress": "Czerwińskiego 4",
+        "postalCode": "21-500",
+        "addressRegion": "lubelskie",
+        "addressCountry": "Polska"
+        },
+        "name": "Gabinet Psychologiczny Anna Humin",
+        "legalName": "Gabinet Psychologiczny Anna Humin",
+        "alternateName": "Psycholog Anna Humin",
+        "brand": "Gabinet Psychologiczny Anna Humin",
+        "email": "anna.humin2@wp.pl",
+        "telephone": "669291602",
+        "image":"https://www.psycholog-biala-podlaska.pl/static/dfaeedc87b1183f09f8da766a820cd79/ee604/logo.png",
+        "logo":"https://www.psycholog-biala-podlaska.pl/static/dfaeedc87b1183f09f8da766a820cd79/ee604/logo.png",
+        "priceRange": "PLN",
+        "url": "www.psycholog-biala-podlaska.pl",
+        "openingHours": "8-16",
+        "sameAs": "https://www.facebook.com/Psycholog-Anna-Humin-100682741678299"
+    }
+
     return (
         <Helmet
             htmlAttributes={{
@@ -73,12 +98,14 @@ function SEO({ description, lang, meta, title, image }: SEOProps) {
                     content: ogImage,
                 },
             ].concat(meta)}
-        />
+        >
+            <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+        </Helmet>
     )
 }
 
 SEO.defaultProps = {
-    lang: `en`,
+    lang: `pl`,
     meta: [],
     description: ``,
 }
