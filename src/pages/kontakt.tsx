@@ -12,15 +12,16 @@ export default ({data, location}: PageProps<ContactQuery>) => {
     return (
         <Layout
             seo={{
-                title: "Kontakt",
+                title: "Kontakt Biała Podlaska",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zadzwoń lub napisz wiadomość!",
             }}
             location={location}
         >
             <div className="container mx-auto py-12">
                 <div className="title py-12 text-center">
-                    <h2 className="font-black text-5xl text-color-1">
+                    <h1 className="font-black text-5xl text-color-1 mb-5">
                         Kontakt
-                    </h2>
+                    </h1>
                 </div>
                 <div className="flex flex-wrap pb-40">
                     {hasContactForm &&

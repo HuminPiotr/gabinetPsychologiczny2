@@ -13,15 +13,16 @@ export default function blogList({ data, pageContext, location }: PageProps<Blog
     return (
         <Layout
             seo={{
-                title: "Blog",
+                title: "Poradnik blogowy o psychologii | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Dowiedz się więcej!"
             }}
             location={location}
         >
             <div className="container mx-auto py-12">
                 <div className="title py-12 text-center">
-                    <h2 className="font-black text-5xl text-color-1">
+                    <h1 className="font-black text-5xl text-color-1">
                         Blog
-                    </h2>
+                    </h1>
                 </div>
                 <div className="flex flex-wrap">{blogItems}</div>
                 <Pagination pageContext={pageContext} type="blog" />
@@ -45,6 +46,7 @@ export const query = graphql`
                         title
                         description
                         date(formatString: "DD-MM-YYYY")
+                        imageAlt
                         image {
                             publicURL
                             childImageSharp {

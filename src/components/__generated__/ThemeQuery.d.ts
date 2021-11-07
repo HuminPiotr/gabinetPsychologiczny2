@@ -12,6 +12,7 @@ export interface ThemeQuery_site_siteMetadata {
   switchTheme: boolean | null;
   darkmode: boolean | null;
   cookiePolicy: boolean | null;
+  siteUrl: string | null;
 }
 
 export interface ThemeQuery_site {

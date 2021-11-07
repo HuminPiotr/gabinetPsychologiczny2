@@ -3782,11 +3782,31 @@
               "defaultValue": null
             },
             {
+              "name": "imageAlt",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "banner",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "FileFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "bannerAlt",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -8760,12 +8780,36 @@
               "deprecationReason": null
             },
             {
+              "name": "imageAlt",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "banner",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
                 "name": "File",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "bannerAlt",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -10573,6 +10617,12 @@
               "deprecationReason": null
             },
             {
+              "name": "childrenMdx___frontmatter___imageAlt",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "childrenMdx___frontmatter___banner___sourceInstanceName",
               "description": null,
               "isDeprecated": false,
@@ -10796,6 +10846,12 @@
             },
             {
               "name": "childrenMdx___frontmatter___banner___children",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childrenMdx___frontmatter___bannerAlt",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -11377,6 +11433,12 @@
               "deprecationReason": null
             },
             {
+              "name": "childMdx___frontmatter___imageAlt",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "childMdx___frontmatter___banner___sourceInstanceName",
               "description": null,
               "isDeprecated": false,
@@ -11600,6 +11662,12 @@
             },
             {
               "name": "childMdx___frontmatter___banner___children",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childMdx___frontmatter___bannerAlt",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -23077,6 +23145,12 @@
               "deprecationReason": null
             },
             {
+              "name": "frontmatter___imageAlt",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "frontmatter___banner___sourceInstanceName",
               "description": null,
               "isDeprecated": false,
@@ -23552,6 +23626,12 @@
             },
             {
               "name": "frontmatter___banner___internal___type",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "frontmatter___bannerAlt",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

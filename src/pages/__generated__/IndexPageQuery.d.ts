@@ -86,6 +86,7 @@ export interface IndexPageQuery_wpis_edges_node_frontmatter_image {
 export interface IndexPageQuery_wpis_edges_node_frontmatter {
   title: string;
   description: string | null;
+  imageAlt: string | null;
   image: IndexPageQuery_wpis_edges_node_frontmatter_image | null;
 }
 
@@ -130,6 +131,7 @@ export interface IndexPageQuery_blog_edges_node_frontmatter {
   title: string;
   description: string | null;
   date: any | null;
+  imageAlt: string | null;
   image: IndexPageQuery_blog_edges_node_frontmatter_image | null;
 }
 

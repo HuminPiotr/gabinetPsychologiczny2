@@ -18,7 +18,7 @@ export const ItemBlog: React.FC<{ data: ItemBlogProps}> = ({ data }) => {
                     <div className="image">
                         <Img
                             fluid={data.frontmatter.image.childImageSharp.fluid}
-                            alt={data.frontmatter.title}
+                            alt={data.frontmatter.imageAlt}
                             className="w-full"
                         />
                     </div>

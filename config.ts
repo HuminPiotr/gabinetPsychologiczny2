@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Anna Humin Gabinet Psychologiczny`,
+    title: `Psycholog Biała Podlaska. Psychoterapia. Terapia małżeńska. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny`,
     siteUrl: `https://www.psycholog-biala-podlaska.pl/`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,

@@ -3,6 +3,10 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { Logo } from "./utils"
 import Navlinks from "./navigation-list"
 import { FooterLinksQuery, FooterLinksQuery_site_siteMetadata_footerLinks } from "./__generated__/FooterLinksQuery"
+import { Send, Mail, Phone, MapPin, Loader } from "react-feather"
+import SocialLinks from "../utils/sociallinks"
+
+
 
 
 export default function() {
@@ -29,18 +33,47 @@ export default function() {
                         <Logo className="w-12"/>
                     </Link>
                 </div>
-                <div className="text-color-2 my-3 footer-links animated-link-parent">
-                    <Navlinks className="flex items-center justify-center flex-wrap" withThemeSwitch={false}/>
+                <div className="text-color-2 my-3 footer-links animated-link-parent mb-10">
+                        <Navlinks className="flex items-center justify-center flex-wrap" withThemeSwitch={false}/>
+                    </div>
+
+
+                <div>
+
+                <div className="my-4 flex justify-center items-center gap-x-8 gap-y-8 flex-col sm:flex-row ">
+                    <div className="flex items-center justify-center px-5 ">
+                        <span className="text-secondary icon">
+                            <Mail />
+                        </span>
+                        <a className="ml-4" href={"mailto:" + "anna.humin2@wp.pl"}>
+                            {"anna.humin2@wp.pl"}
+                        </a>
+                    </div>
+                    <div className="flex items-center  justify-center  px-5">
+                        <span className="text-secondary icon">
+                            <Phone />
+                        </span>
+                        <a className="ml-4" href={"tel:" + "669291602"}>
+                            {"669291602"}
+                        </a>
+                    </div>
+                    <div className="flex items-start  justify-center items-center  px-5">
+                        <span className="mt-1 text-secondary icon">
+                            <MapPin />
+                        </span>
+                        <p className="whitespace-pre ml-4 text-left">{"21-500 \nBiała Podlaska \nul. Czerwińskiego 4"}</p>
+                    </div>
+                    <div> 
+                        <SocialLinks />
+                    </div>
                 </div>
-                <div
-                    className="text-color-2 my-3"
-                >
-                 
-                </div>
+      
                 <p className="text-color-default text-lg">
-                    Copyright &copy; {query.site.siteMetadata.title}{" Anna Humin "}
+                    Copyright &copy; {" Anna Humin Gabinet Psychologiczny "}
                     {new Date().getFullYear()}
                 </p>
+                </div>
+
             </div>
         </footer>
     )

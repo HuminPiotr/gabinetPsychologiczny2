@@ -15,7 +15,7 @@ export default function blog({ location, data }: PageProps<BlogQuery, {}>) {
         <Layout
             seo={{
                 title: data.mdx.frontmatter.title,
-                description: data.mdx.frontmatter.description,
+                description: `Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ ${data.mdx.frontmatter.title} ⭐ Przeczytaj i dowiedz się więcej!`,
                 image: data.mdx.frontmatter.banner.publicURL
             }}
             location={location}
@@ -26,6 +26,7 @@ export default function blog({ location, data }: PageProps<BlogQuery, {}>) {
                         fluid={
                             data.mdx.frontmatter.banner.childImageSharp.fluid
                         }
+                        alt={data.mdx.frontmatter.bannerAlt}
                     />
                     <div className="relative w-full lg:w-3/4 md:w-11/12 sm:w-full p-6 box-border lg:box-content mx-auto bg-bg text-color-default blog-wall-content shadow-xl md:-mt-16 ">
                         <div className="p-3">
@@ -63,6 +64,7 @@ export const query = graphql`
                 title
                 date(formatString: "DD-MM-YYYY")
                 description
+                bannerAlt
                 banner {
                     publicURL
                     childImageSharp {

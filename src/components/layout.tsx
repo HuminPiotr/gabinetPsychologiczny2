@@ -14,6 +14,7 @@ import "../style/index.css"
 import { ThemeQuery } from "./__generated__/ThemeQuery"
 import CookieBox from "./cookie";
 import store from "../utils/store";
+import MobileCallButton from "./mobile-phone-button";
 
 export type Theme = { name: string, label: string, icon: JSX.Element };
 type LayoutProps = { children: any, front?: boolean, seo: Partial<SEOProps>, navPlaceholder?: boolean, location: WindowLocation;}
@@ -28,6 +29,7 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
                     switchTheme
                     darkmode
                     cookiePolicy
+                    siteUrl
                 }
             }
         }
@@ -79,7 +81,7 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
 
     return (
         <React.Fragment>
-            <Head data={query}/>
+            <Head data={query} pathname={location.pathname}/>
             <SEO {...seo} />
             <div className={`wrapper ${themes[theme].name}`}>
                 <div className="text-color-default bg-bg">
@@ -91,11 +93,13 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
                     (query.site.siteMetadata.cookiePolicy && !cookieShown) && <CookieBox onChange={onCookieAccept}/>
                 }
             </div>
+            <MobileCallButton />
+
         </React.Fragment>
     )
 }
 
-const Head = ({ data }) => {
+const Head = ({ data, pathname }) => {
     return (
         <Helmet>
             <link
@@ -107,6 +111,7 @@ const Head = ({ data }) => {
                 href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap"
                 rel="stylesheet"
             />
+            <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${pathname}`}></link>
         </Helmet>
     )
 }

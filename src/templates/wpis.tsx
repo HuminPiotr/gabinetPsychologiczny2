@@ -25,6 +25,7 @@ export default function porfolio ({ location, data }: PageProps<PortfolioQuery, 
                         fluid={
                             data.mdx.frontmatter.banner.childImageSharp.fluid
                         }
+                        alt={data.mdx.frontmatter.bannerAlt}
                     />
                     <div className="flex items-center justify-center relative lg:absolute w-full h-full top-0 left-0">
                         <div className="hidden lg:block absolute w-full h-full bg-black opacity-50"></div>
@@ -62,6 +63,8 @@ export const query = graphql`
                 title
                 date(formatString: "DD MMMM YYYY")
                 description
+                imageAlt
+                bannerAlt
                 banner {
                     publicURL
                     childImageSharp {

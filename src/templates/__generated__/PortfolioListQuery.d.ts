@@ -34,6 +34,7 @@ export interface PortfolioListQuery_allMdx_edges_node_frontmatter_image {
 export interface PortfolioListQuery_allMdx_edges_node_frontmatter {
   title: string;
   description: string | null;
+  imageAlt: string | null;
   image: PortfolioListQuery_allMdx_edges_node_frontmatter_image | null;
 }
 

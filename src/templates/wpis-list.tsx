@@ -7,7 +7,6 @@ import { PortfolioListQuery } from "./__generated__/PortfolioListQuery"
 
 export default function portfolioList({ data, pageContext, location }: PageProps<PortfolioListQuery, {}>) {
 
-
     useEffect(() => {
         window.dispatchEvent(new CustomEvent('scroll'))
     }, [])
@@ -52,6 +51,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         description
+                        imageAlt
                         image {
                             publicURL
                             childImageSharp {

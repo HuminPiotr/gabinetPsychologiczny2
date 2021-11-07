@@ -15,8 +15,6 @@ import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 import RoundedImage from "../components/roundedImage"
 import ScrollIntoView from "react-scroll-into-view"
 
-
-
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
     
@@ -36,8 +34,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Psycholog",
-                description: siteData.description,
+                title: "Psycholog Biała Podlaska. Psychoterapia. Terapia małżeńska. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zapraszam do kontaktu!",
             }}
             navPlaceholder={false}
             location={location}
@@ -50,6 +48,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             </div>
            {blogList.length ? <Blog>{blogList}</Blog> : null} 
             <Contact data={siteData.contact} />
+
         </Layout>
     )
 }
@@ -58,7 +57,6 @@ const Wall = ({ data, siteData }) => {
     const wall = useRef(null)
     
     const twoColumnWall = siteData.twoColumnWall;
-    console.log(twoColumnWall)
     const [state, changeState] = useState({
         loaded: false,
         supportsBlend: false,
@@ -135,7 +133,7 @@ const Wall = ({ data, siteData }) => {
                     {/* <div className="h-full w-auto max-w-none -ml-40 lg:h-auto lg:w-full md:ml-0"> */}
                     <Image 
                         fluid={data.fluid}
-                        alt="Psycholog zdjęcie tytułowe"
+                        alt="Dłonie podające sadzonkę drzewka"
                         className="h-full w-auto max-w-none  lg:h-auto lg:w-full  z-0"
                     />
                     {/* </div> */}
@@ -153,6 +151,31 @@ const Wall = ({ data, siteData }) => {
             ref={wall}
         >
             {innerComponents}
+        </div>
+    )
+}
+
+const Help = ( {data} ) => {
+    return (
+        <div className="boxed relative">
+            {/* <div className="imageContainer hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10">
+                <Image fluid={data.fluid} />
+            </div> */}
+            <div className="px-4 py-10 text-left lg:py-20 lg:px-0">
+                <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
+                    W czym mogę Ci pomóc?
+                </h2>
+                <ul className="list-disc pl-10 text-lg ">
+                     <li className="mb-2">Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
+                     <li className="mb-2">Psychoterapia rodzinna, indywidualna i grupowa</li>
+                     <li className="mb-2">Diagnoza sprawności intelektualnych dorosłych, wydawanie opinii psychologicznych</li>
+                     <li className="mb-2">Interwencja kryzysowa</li>
+                     <li className="mb-2">Stres</li>
+                     <li className="mb-2">Niska samoocena</li>
+                     <li className="mb-2">Niepewność siebie</li>
+                     <li className="mb-2">Depresja</li>
+                </ul>
+            </div>
         </div>
     )
 }
@@ -202,31 +225,7 @@ const About = ({ data }) => {
     )
 }
 
-const Help = ( {data} ) => {
-    console.log(data);
-    return (
-        <div className="boxed relative">
-            <div className="imageContainer hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10">
-                <Image fluid={data.fluid} />
-            </div>
-            <div className="px-4 py-10 text-left lg:py-20 lg:px-0">
-                <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    W czym mogę Ci pomóc?
-                </h2>
-                <ul className="list-disc pl-10">
-                    <li>Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
-                    <li>Psychoterapia rodzinna, indywidualna i grupowa</li>
-                    <li>Diagnoza sprawności intelektualnych dorosłych, wydawanie opinii psychologicznych</li>
-                    <li>Interwencja kryzysowa</li>
-                    <li>Stres</li>
-                    <li>Niska samoocena</li>
-                    <li>Niepewność siebie</li>
-                    <li>Depresja</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+
 
 
 const Blog = ({ children }) => {
@@ -321,6 +320,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         description
+                        imageAlt
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 1000) {
@@ -346,6 +346,7 @@ export const query = graphql`
                         title
                         description
                         date(formatString: "DD-MM-YYYY")
+                        imageAlt
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 1000) {
