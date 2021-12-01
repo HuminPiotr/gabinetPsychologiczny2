@@ -14,7 +14,7 @@ export default function blog({ location, data }: PageProps<BlogQuery, {}>) {
     return (
         <Layout
             seo={{
-                title: data.mdx.frontmatter.title,
+                title: `${data.mdx.frontmatter.title} | Anna Humin Gabinet Psychologiczny`,
                 description: `Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ ${data.mdx.frontmatter.title} ⭐ Przeczytaj i dowiedz się więcej!`,
                 image: data.mdx.frontmatter.banner.publicURL
             }}

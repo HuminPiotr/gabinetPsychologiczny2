@@ -13,8 +13,8 @@ export default function porfolio ({ location, data }: PageProps<PortfolioQuery, 
     return (
         <Layout
             seo={{
-                title: data.mdx.frontmatter.title,
-                description: data.mdx.frontmatter.description,
+                title: `${data.mdx.frontmatter.title} | Anna Humin Gabinet Psychologiczny`,
+                description: `Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ ${data.mdx.frontmatter.title} ⭐ Przeczytaj i dowiedz się więcej!`,
                 image: data.mdx.frontmatter.banner.publicURL,
             }}
             location={location}
