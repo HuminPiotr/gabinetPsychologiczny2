@@ -55,11 +55,7 @@ function SEO({ description, lang, meta, title, image }: SEOProps) {
                 lang,
             }}
             title={title}
-            titleTemplate={
-                title === site.siteMetadata.title
-                    ? title
-                    : `%s | ${site.siteMetadata.title}`
-            }
+            titleTemplate={title}
             meta={[
                 {
                     name: `description`,
