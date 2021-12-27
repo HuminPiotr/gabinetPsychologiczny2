@@ -11,7 +11,7 @@ const siteMetadata = {
     twoColumnWall: true,
     cookiePolicy: true,
     introTag: `Anna Humin`,
-    description: `Pomoc psychologiczna dla dorosłych i młodzieży, psychoterapia, terapia małżeńska, psychoedukacja, pomoc psychologiczna dla dziecka w zaburzeniach emocjonalnych i wychowawczych.`,
+    description: `Jako doświadczona psycholog z Białej Podlaskiej, oferuję profesjonalną pomoc psychologiczną dla dorosłych i młodzieży. Zapewniam usługi w zakresie: `,
     about:
         "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Prowadzę terapię indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, terapię małżeńską oraz terapię w dolegliwościach psychosomatycznych.",
     author: `@_akzhy`,

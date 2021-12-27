@@ -85,9 +85,9 @@ const Wall = ({ data, siteData }) => {
 
     const innerComponents = (
         <React.Fragment>
-            <div className="title bg-bg">
+            <div className="title bg-bg ">
                 <h1
-                    className={`pb-4 text-4xl relative lg:text-7xl ${
+                    className={`pb-4 text-2xl relative lg:text-5xl mt-20 ${
                         siteData.capitalizeTitleOnHome ? "uppercase" : ""
                     }`}
                 >
@@ -95,14 +95,19 @@ const Wall = ({ data, siteData }) => {
                     Psycholog - Biała Podlaska
                 </h1>
             </div>
-            <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0 mt-2">
-                {/* {siteData.introTag} */}
-            </p>
-            <p className="text-base lg:text-lg mt-4">{siteData.description}</p>
+
+            <p className="text-sm lg:text-lg mt-4  ">Jako doświadczona psycholog z Białej Podlaskiej, <strong>oferuję profesjonalną pomoc psychologiczną dla dorosłych i młodzieży.</strong></p> <br></br>
+            <p className="text-sm lg:text-lg"> Zapewniam usługi w zakresie:</p>
+            <ul className="list-disc pl-10 text-sm lg:text-lg text-left">
+                <li>diagnozy psychologicznej ( określenie poziomu rozwoju sprawności intelektualnych, dolegliwości psychosomatycznych, trudności emocjonalno- społecznych )</li>
+                <li>psychoterapji  małżeńskieji i indywidualnej</li>
+                <li>psychoedukacji ( komunikacja interpersonalna, emocje i jak sobie z nimi radzić, doskonalenie umiejętności społecznych, emocjonalnych, wychowawczych)</li>
+                <li>niezwykle istotny jest dla mnie dobry kontakt z klientem.  Staram się, by podczas rozmowy ze mną czuł się bezpiecznie, szanowany oraz w pełni akceptowany. Podczas spotkań zapewniam pełną dyskrecję. </li>
+            </ul>
             
             <ScrollIntoView selector="#contact">
                 <Button
-                    label={`ZnanyLekarz`}
+                    label={`Zapisz się na wizytę`}
                     type="button"
                     title="Zapisz się na wizytę"
                     
@@ -138,7 +143,7 @@ const Wall = ({ data, siteData }) => {
                     />
                     {/* </div> */}
                 </div>
-                <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
+                <div className="flex-1 text-center p-3  relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                     {innerComponents}
                 </div>
             </div>
@@ -161,20 +166,21 @@ const Help = ( {data} ) => {
             {/* <div className="imageContainer hidden sm:block absolute w-2/6 right-0 bottom-0 -mr-10 -mb-10">
                 <Image fluid={data.fluid} />
             </div> */}
-            <div className="px-4 py-10 text-left lg:py-20 lg:px-0">
+            <div className="px-4 py-10  text-left lg:py-20 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     W czym mogę Ci pomóc?
                 </h2>
                 <ul className="list-disc pl-10 text-lg ">
                      <li className="mb-2">Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
-                     <li className="mb-2">Psychoterapia rodzinna, indywidualna i grupowa</li>
-                     <li className="mb-2">Diagnoza sprawności intelektualnych dorosłych, wydawanie opinii psychologicznych</li>
+                     <li className="mb-2">Psychoterapia rodzinna, indywidualna i grupowa, terapia dla par</li>
+                     <li className="mb-2">Diagnoza sprawności intelektualnych dla młodzieży i dorosłych, wydawanie opinii psychologicznych</li>
                      <li className="mb-2">Interwencja kryzysowa</li>
                      <li className="mb-2">Stres</li>
                      <li className="mb-2">Niska samoocena</li>
                      <li className="mb-2">Niepewność siebie</li>
                      <li className="mb-2">Depresja</li>
                 </ul>
+                <p className="mt-5 text-lg"><strong>Prowadzona przeze mnie terapia psychologiczna w Białej Podlaskiej przebiega w przyjaznej oraz pełnej zaufania atmosferze.</strong> Jeśli potrzebujesz pomocy psychologicznej terapeuty - borykasz się z problemami natury psychicznej lub chcesz otrzymać wsparcie w rozwoju osobistym, zapraszam do mojego gabinetu. </p>
             </div>
         </div>
     )
@@ -188,15 +194,15 @@ const About = ({ data }) => {
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     O mnie
                 </h2>
-                <div className="md:flex items-center" >
+                <div className="md:flex items-center " >
 
                     <RoundedImage/>
 
-                    <div className="text-left text-lg">
-                        <p>Dzień dobry!</p> 
-                        <p>Nazywam się Anna Humin. Jestem psychologiem z 30 letnim doświadczeniem zawodowym. </p> 
+                    <div className="text-left text-lg ">
+                        <p >Tytuł magistra zdobyłam na Katolickim Uniwersytecie Lubelskim - na Wydziale Nauk Społecznych w zakresie psychologii z przygotowaniem pedagogicznym. Odbyłam również szereg dodatkowych szkoleń i kursów. Przez długi czas pracowałam w Poradni Psychologiczno-Pedagogicznej w Białej Podlaskiej jako psycholog. Aktualnie mam własny gabinet psychologiczny, pracuję również w Poradni Rodzinnej w Białej Podlaskiej.</p>
+                         <p> Uwielbiam przebywać z rodziną, interesuję się samorozwojem. Lubię tańczyć. </p> 
                         
-                        <h3>Specjalizuję się szczególnie w obszarach:</h3>
+                        {/* <h3>Specjalizuję się szczególnie w obszarach:</h3>
                         
                         <ul className="list-disc pl-10">
                             <li>trudności wychowawczych</li>
@@ -207,7 +213,7 @@ const About = ({ data }) => {
                         </ul>
                         <h3>Moje motta:</h3>
                         <p>"Chcesz zmienić czy zrozumieć świat? Zacznij od siebie."</p>
-                        <p>"Pokochaj siebie a wszystko zacznie Ci sprzyjać!"</p>
+                        <p>"Pokochaj siebie a wszystko zacznie Ci sprzyjać!"</p> */}
                         <Button
                     to="/o-mnie"
                     label={`O mnie`}
