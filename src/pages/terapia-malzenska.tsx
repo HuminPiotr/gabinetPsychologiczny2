@@ -18,8 +18,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Psycholog Biała Podlaska. Psychoterapia. Terapia małżeńska. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zapraszam do kontaktu!",
+                title: "Terapia Małżeńska Biała Podlaska. Terapia dla Par. Psycholog | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna, terapie dla małżeństw, dla par ⭐ Zapraszam do kontaktu!",
             }}
             navPlaceholder={false}
             location={location}
@@ -39,7 +39,7 @@ const Hero = ( {image} ) => {
 
             <div className="px-4 py-10  text-left lg:py-20 lg:px-0">
                 <h1 className="text-color-1 font-black text-5xl lg:text-6xl mt-10">
-                    Terapia małżeńska
+                 Terapia małżeńska - Biała Podlaska
                 </h1>
                 <div className="flex"> 
                     <Image 
