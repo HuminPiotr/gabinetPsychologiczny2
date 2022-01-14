@@ -3,8 +3,6 @@ import { graphql, PageProps } from "gatsby"
 import Image from 'gatsby-image'
 
 import { ArrowRight } from "react-feather"
-
-
 import Layout from "../components/layout"
 import { Button } from "../components/ui"
 
@@ -110,7 +108,6 @@ const Wall = ({ data, siteData }) => {
                     label={`Zapisz się na wizytę`}
                     type="button"
                     title="Zapisz się na wizytę"
-                    
                 />
             </ScrollIntoView>
           

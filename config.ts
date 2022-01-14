@@ -29,6 +29,10 @@ const siteMetadata = {
             url: "/o-mnie",
         },
         {
+            name: "Terapia małżeńska",
+            url: "/terapia-malzenska",
+        },
+        {
             name: "Blog",
             url: "/blog",
         },
