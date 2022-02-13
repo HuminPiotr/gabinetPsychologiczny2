@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import ItemBlog from "../components/item-blog"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
+import { Link } from "gatsby"
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
@@ -60,7 +61,7 @@ const Hero = ( {image} ) => {
                 </p>
 
                 <h2 className="text-color-1  text-xl lg:text-3xl">Doświadczona psycholog - Biała Podlaska</h2>
-                <p className="mt-5 text-lg">Jako doświadczona psycholog z Białej Podlaskiej, służę wsparciem parom, które nie chcą doprowadzić do rozstania lub poprawić jakość relacji w związku. Moja wiedza oraz kompetencje pozwalają mi <strong> wskazać partnerom ich zasoby oraz możliwe rozwiązania problemów.</strong> Terapia małżeńska to ważny krok - jeśli obie strony wykazują chęć pracy, istnieje duża szansa, że partnerzy nauczą się skutecznej komunikacji między sobą. Zainteresowane osoby, zapraszam do kontaktu telefonicznego, mailowego lub poprzez formularz na mojej stronie internetowej.
+                <p className="mt-5 text-lg">Jako <Link className="underline" to="/">doświadczona psycholog z Białej Podlaskiej</Link>,  służę wsparciem parom, które nie chcą doprowadzić do rozstania lub poprawić jakość relacji w związku. Moja wiedza oraz kompetencje pozwalają mi <strong> wskazać partnerom ich zasoby oraz możliwe rozwiązania problemów.</strong> Terapia małżeńska to ważny krok - jeśli obie strony wykazują chęć pracy, istnieje duża szansa, że partnerzy nauczą się skutecznej komunikacji między sobą. Zainteresowane osoby, zapraszam do kontaktu telefonicznego, mailowego lub poprzez formularz na mojej stronie internetowej.
                 </p>
 
             </div>
