@@ -36,10 +36,10 @@ const siteMetadata = {
             name: "Blog",
             url: "/blog",
         },
-        // {
-        //     name: "PORTFOLIO",
-        //     url: "/portfolio",
-        // },
+        {
+            name: "Psycholog dla młodzieży",
+            url: "/psycholog-dla-mlodziezy",
+        },
         {
             name: "Kontakt",
             url: "/kontakt",
