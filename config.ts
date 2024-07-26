@@ -33,17 +33,22 @@ const siteMetadata = {
             url: "/terapia-malzenska",
         },
         {
-            name: "Blog",
-            url: "/blog",
+            name: "Rozwój osobisty",
+            url: "/rozwoj-osobisty",
         },
         {
             name: "Psycholog dla młodzieży",
             url: "/psycholog-dla-mlodziezy",
         },
         {
+            name: "Blog",
+            url: "/blog",
+        },
+        {
             name: "Kontakt",
             url: "/kontakt",
         },
+
     ],
     footerLinks: [
         // {

@@ -25,7 +25,7 @@ export default ({ data,location }) => {
             </h1>
             <div className="md:flex items-center" >
 
-                <RoundedImage src={siteData.personImage} />
+                <RoundedImage />
 
                 <div className="text-left text-lg">
                     <p>Dzień dobry!</p> 
