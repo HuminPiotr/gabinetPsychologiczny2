@@ -7,7 +7,7 @@ const RoundedImage = () => {
 
     const data = useStaticQuery(graphql`
         query Image {
-            imageSharp(fluid: {src: {regex: "/AnnaHumin/"}}) {
+            imageSharp(fluid: {src: {regex: "/portret.jpg/"}}) {
                 fluid{
                         ...GatsbyImageSharpFluid_tracedSVG
                 }

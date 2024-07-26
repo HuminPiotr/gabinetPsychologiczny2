@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Helmet from "react-helmet"
+
 import { useStaticQuery, graphql } from "gatsby"
 import { WindowLocation } from '@reach/router';
 

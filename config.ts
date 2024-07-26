@@ -6,7 +6,7 @@ const siteMetadata = {
     icon: `/images/icon2.png`,
     titleImage: `/images/5.jpg`,
     ogImage: `/images/wall.png`,
-    personImage: `/images/AnnaHumin.jpg`,
+    personImage: `/images/portret.jpg`,
     helpImage: `/images/woman.png`,
     twoColumnWall: true,
     cookiePolicy: true,

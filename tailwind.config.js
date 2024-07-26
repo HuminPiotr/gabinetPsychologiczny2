@@ -61,7 +61,12 @@ module.exports = {
             spacing: {
                 '1px': '1px',
                 '2px': '2px'
-            }
+            },
+            maxWidth: {
+                'screen-lg': '1200px', // Domyślnie 1024px, zmień na żądaną wartość
+                'screen-md': '768px',  // Domyślnie 768px, zmień na żądaną wartość
+              }
+        
         },
     },
     variants: {},
