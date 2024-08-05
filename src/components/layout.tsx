@@ -112,6 +112,8 @@ const Head = ({ data, pathname }) => {
                 href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap"
                 rel="stylesheet"
             />
+
+            <script defer src="https://cloud.umami.is/script.js" data-website-id="bc2f051c-883f-46eb-be92-5a1fad208b16"></script>
             <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${pathname}`}></link>
         </Helmet>
     )
