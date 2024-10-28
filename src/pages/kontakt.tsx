@@ -13,7 +13,7 @@ export default ({data, location}: PageProps<ContactQuery>) => {
         <Layout
             seo={{
                 title: "Kontakt Biała Podlaska | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zadzwoń lub napisz wiadomość!",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zadzwoń lub napisz wiadomość!",
             }}
             location={location}
         >

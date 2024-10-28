@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Psycholog Biała Podlaska. Psychoterapia. Terapia małżeńska. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny`,
+    title: `Psycholog Biała Podlaska. Wspacie małżeńskie. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny`,
     siteUrl: `https://www.psycholog-biala-podlaska.pl/`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -13,7 +13,7 @@ const siteMetadata = {
     introTag: `Anna Humin`,
     description: `Jako doświadczona psycholog z Białej Podlaskiej, oferuję profesjonalną pomoc psychologiczną dla dorosłych i młodzieży. Zapewniam usługi w zakresie: `,
     about:
-        "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Prowadzę terapię indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, terapię małżeńską oraz terapię w dolegliwościach psychosomatycznych.",
+        "Nazywam się Anna Humin i jestem psychologiem z wieloletnim stażem. Oferuję pomoc psychologiczn indywidualną dorosłych i młodzieży, konsultacje rodzicielskie, wsparcie małżeńskie oraz pomoc w dolegliwościach psychosomatycznych.",
     author: `@_akzhy`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 2,
@@ -29,8 +29,8 @@ const siteMetadata = {
             url: "/o-mnie",
         },
         {
-            name: "Terapia małżeńska",
-            url: "/terapia-malzenska",
+            name: "Wsparcie małżeńskie",
+            url: "/wsparcie-malzenskie",
         },
         {
             name: "Rozwój osobisty",

@@ -32,8 +32,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Psycholog Biała Podlaska. Psychoterapia. Terapia małżeńska. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zapraszam do kontaktu!",
+                title: "Psycholog Biała Podlaska. Pomoc psychologiczna. Pomoc psychologiczna dla par. Dla młodzieży | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Zapraszam do kontaktu!",
             }}
             navPlaceholder={false}
             location={location}
@@ -97,9 +97,9 @@ const Wall = ({ data, siteData }) => {
             <p className="text-sm lg:text-lg mt-4  ">Jako doświadczona psycholog z Białej Podlaskiej, <strong>oferuję profesjonalną pomoc psychologiczną dla dorosłych i młodzieży.</strong></p> <br></br>
             <p className="text-sm lg:text-lg"> Zapewniam usługi w zakresie:</p>
             <ul className="list-disc pl-10 text-sm lg:text-lg text-left">
-                <li>diagnozy psychologicznej ( określenie poziomu rozwoju sprawności intelektualnych, dolegliwości psychosomatycznych, trudności emocjonalno- społecznych )</li>
-                <li>psychoterapji  małżeńskieji i indywidualnej</li>
-                <li>psychoedukacji ( komunikacja interpersonalna, emocje i jak sobie z nimi radzić, doskonalenie umiejętności społecznych, emocjonalnych, wychowawczych)</li>
+                <li>diagnozy psychologicznej (określenie poziomu rozwoju sprawności intelektualnych, dolegliwości psychosomatycznych, trudności emocjonalno- społecznych )</li>
+                <li>pomocy psychologicznej małżeńskiej i indywidualnej</li>
+                <li>psychoedukacji (komunikacja interpersonalna, emocje i jak sobie z nimi radzić, doskonalenie umiejętności społecznych, emocjonalnych, wychowawczych)</li>
                 <li>niezwykle istotny jest dla mnie dobry kontakt z klientem.  Staram się, by podczas rozmowy ze mną czuł się bezpiecznie, szanowany oraz w pełni akceptowany. Podczas spotkań zapewniam pełną dyskrecję. </li>
             </ul>
             
@@ -107,7 +107,7 @@ const Wall = ({ data, siteData }) => {
                 <Button
                     label={`Zapisz się na wizytę`}
                     type="button"
-                    title="Zapisz się na wizytę"
+                    title="Zapisz się na wizytę" 
                 />
             </ScrollIntoView>
           
@@ -169,7 +169,7 @@ const Help = ( {data} ) => {
                 </h2>
                 <ul className="list-disc pl-10 text-lg ">
                      <li className="mb-2">Poradnictwo psychologiczne dla rodziców i opiekunów prawnych</li>
-                     <li className="mb-2">Psychoterapia rodzinna, indywidualna i grupowa, terapia dla par</li>
+                     <li className="mb-2">Pomoc psychologiczna  rodzinna, indywidualna i grupowa, dla par</li>
                      <li className="mb-2">Diagnoza sprawności intelektualnych dla młodzieży i dorosłych, wydawanie opinii psychologicznych</li>
                      <li className="mb-2">Interwencja kryzysowa</li>
                      <li className="mb-2">Stres</li>
@@ -177,7 +177,7 @@ const Help = ( {data} ) => {
                      <li className="mb-2">Niepewność siebie</li>
                      <li className="mb-2">Depresja</li>
                 </ul>
-                <p className="mt-5 text-lg"><strong>Prowadzona przeze mnie terapia psychologiczna w Białej Podlaskiej przebiega w przyjaznej oraz pełnej zaufania atmosferze.</strong> Jeśli potrzebujesz pomocy psychologicznej terapeuty - borykasz się z problemami natury psychicznej lub chcesz otrzymać wsparcie w rozwoju osobistym, zapraszam do mojego gabinetu. </p>
+                <p className="mt-5 text-lg"><strong>Prowadzona przeze mnie pomoc psychologiczna w Białej Podlaskiej przebiega w przyjaznej oraz pełnej zaufania atmosferze.</strong> Jeśli potrzebujesz pomocy psychologicznej  - borykasz się z problemami natury psychicznej lub chcesz otrzymać wsparcie w rozwoju osobistym, zapraszam do mojego gabinetu. </p>
             </div>
         </div>
     )

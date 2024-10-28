@@ -19,8 +19,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Psycholog dla Młodzieży Biała Podlaska. Terapia dla Nastolatków | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna, terapie dla młodzieży i nastolatków ⭐ Zapraszam do kontaktu!",
+                title: "Psycholog dla Młodzieży Biała Podlaska. Pomoc psychologiczna dla Nastolatków | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna, wsparcie dla młodzieży i nastolatków ⭐ Zapraszam do kontaktu!",
             }}
             navPlaceholder={false}
             location={location}

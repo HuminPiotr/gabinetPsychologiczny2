@@ -14,7 +14,7 @@ export default function blogList({ data, pageContext, location }: PageProps<Blog
         <Layout
             seo={{
                 title: "Poradnik blogowy o psychologii | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Dowiedz się więcej!"
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Dowiedz się więcej!"
             }}
             location={location}
         >

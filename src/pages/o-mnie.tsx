@@ -13,7 +13,7 @@ export default ({ data,location }) => {
         <Layout
             seo={{
                 title: "Dowiedz się więcej o mnie | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Psychoterapia, pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Skontaktuj się ze mną!"
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna dla małżeństw, dla par, dla młodzieży. Rozwój osobisty ⭐ Skontaktuj się ze mną!"
             }}
             location={location}
         >

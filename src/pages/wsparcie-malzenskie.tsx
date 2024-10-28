@@ -19,8 +19,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Terapia Małżeńska Biała Podlaska. Terapia dla Par. Psycholog | Anna Humin Gabinet Psychologiczny",
-                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna, terapie dla małżeństw, dla par ⭐ Zapraszam do kontaktu!",
+                title: "Wsparcie Małżeńskie Biała Podlaska. Pomoc dla Par. Psycholog | Anna Humin Gabinet Psychologiczny",
+                description: "Psycholog Anna Humin - Gabinet Psychologiczny w Białej Podlaskiej ⭐ Pomoc psychologiczna, wsparcie dla małżeństw, dla par ⭐ Zapraszam do kontaktu!",
             }}
             navPlaceholder={false}
             location={location}
@@ -40,7 +40,7 @@ const Hero = ( {image} ) => {
 
             <div className="px-4 py-10  text-left lg:py-20 lg:px-0">
                 <h1 className="text-color-1 font-black text-5xl lg:text-6xl mt-10">
-                 Terapia małżeńska - Biała Podlaska
+                 Wsparcie małżeńskie - Biała Podlaska
                 </h1>
                 <div className="flex"> 
                     <Image 
@@ -49,19 +49,19 @@ const Hero = ( {image} ) => {
                             className="h-full w-auto max-w-none  lg:h-auto lg:w-full  z-0 order-2 md:order-1 "
                     />
                     <p className="mt-5 text-lg max-w-4xl lg:mr-10">
-                    Oferuję profesjonalną pomoc dla mieszkańców Białej Podlaskiej, którym potrzebna jest terapia małżeńska. Jeśli Wasz związek przeżywa kryzys, macie problem z komunikacją, a konflikty między Wami coraz bardziej przybierają na sile, warto skorzystać z pomocy doświadczonego psychoterapeuty. Prowadzona przeze mnie <strong> terapia dla par w Białej Podlaskiej, uczy skutecznych sposobów porozumiewania się między partnerami.</strong> Pomagam w ustaleniu źródła problemów, nazywaniu swoich emocji oraz ich wyrażaniu.
+                    Oferuję profesjonalną pomoc dla mieszkańców Białej Podlaskiej, którym potrzebne jest wsparcie małżeństwa. Jeśli Wasz związek przeżywa kryzys, macie problem z komunikacją, a konflikty między Wami coraz bardziej przybierają na sile, warto skorzystać z pomocy doświadczonego psychologa. Prowadzona przeze mnie <strong> pomoc psychologiczna dla par w Białej Podlaskiej, uczy skutecznych sposobów porozumiewania się między partnerami.</strong> Pomagam w ustaleniu źródła problemów, nazywaniu swoich emocji oraz ich wyrażaniu.
                     </p>
 
 
                 </div>
 
-                <h2 className=" text-color-1 text-xl lg:text-3xl">Terapia małżeńska - kiedy warto wybrać się do specjalisty?</h2>
+                <h2 className=" text-color-1 text-xl lg:text-3xl">Wsparcie małżeńskie - kiedy warto wybrać się do specjalisty?</h2>
                 <p className="mt-5 text-lg">
-                Często pojawiające się konflikty, których para nie jest w stanie rozwiązać samodzielnie, to sygnał, że warto rozważyć wizytę u psychologa. Pacjenci decydują się na podjęcie terapii z różnych powodów - czasem jest to nadmierna zazdrość u jednego z partnerów, różne poglądy na temat wychowania, czy trudności związane z bliskością. Szczera rozmowa u specjalisty często pomaga odbudować relację, jednak <strong> bardzo ważne jest zaangażowanie obu stron oraz cierpliwość </strong> - każda zmiana bowiem wymaga czasu. Terapia małżeńska w moim gabinecie w Białej Podlaskiej przebiega w atmosferze życzliwości oraz zaufania. Zawsze biorę pod uwagę oczekiwania oraz punkt widzenia każdej ze stron.
+                Często pojawiające się konflikty, których para nie jest w stanie rozwiązać samodzielnie, to sygnał, że warto rozważyć wizytę u psychologa. Pacjenci decydują się na pomoc psychologiczn z różnych powodów - czasem jest to nadmierna zazdrość u jednego z partnerów, różne poglądy na temat wychowania, czy trudności związane z bliskością. Szczera rozmowa u specjalisty często pomaga odbudować relację, jednak <strong> bardzo ważne jest zaangażowanie obu stron oraz cierpliwość </strong> - każda zmiana bowiem wymaga czasu. Wsparcie małżeńskie w moim gabinecie w Białej Podlaskiej przebiega w atmosferze życzliwości oraz zaufania. Zawsze biorę pod uwagę oczekiwania oraz punkt widzenia każdej ze stron.
                 </p>
 
                 <h2 className="text-color-1  text-xl lg:text-3xl">Doświadczona psycholog - Biała Podlaska</h2>
-                <p className="mt-5 text-lg">Jako <Link className="underline" to="/">doświadczona psycholog z Białej Podlaskiej</Link>,  służę wsparciem parom, które nie chcą doprowadzić do rozstania lub poprawić jakość relacji w związku. Moja wiedza oraz kompetencje pozwalają mi <strong> wskazać partnerom ich zasoby oraz możliwe rozwiązania problemów.</strong> Terapia małżeńska to ważny krok - jeśli obie strony wykazują chęć pracy, istnieje duża szansa, że partnerzy nauczą się skutecznej komunikacji między sobą. Zainteresowane osoby, zapraszam do kontaktu telefonicznego, mailowego lub poprzez formularz na mojej stronie internetowej.
+                <p className="mt-5 text-lg">Jako <Link className="underline" to="/">doświadczona psycholog z Białej Podlaskiej</Link>,  służę wsparciem parom, które nie chcą doprowadzić do rozstania lub poprawić jakość relacji w związku. Moja wiedza oraz kompetencje pozwalają mi <strong> wskazać partnerom ich zasoby oraz możliwe rozwiązania problemów.</strong> Wsparcie małżeńskie to ważny krok - jeśli obie strony wykazują chęć pracy, istnieje duża szansa, że partnerzy nauczą się skutecznej komunikacji między sobą. Zainteresowane osoby, zapraszam do kontaktu telefonicznego, mailowego lub poprzez formularz na mojej stronie internetowej.
                 </p>
 
             </div>
