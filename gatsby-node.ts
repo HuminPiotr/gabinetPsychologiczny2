@@ -2,6 +2,12 @@ import { createFilePath } from 'gatsby-source-filesystem';
 import { GatsbyNode } from 'gatsby';
 import path from 'path';
 
+// gatsby-node.js
+if (typeof ReadableStream === 'undefined') {
+    global.ReadableStream = require('readable-stream').Readable;
+  }
+  
+
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, getNode, actions }) => {
     const { createNodeField } = actions
