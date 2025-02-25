@@ -41,6 +41,10 @@ const siteMetadata = {
             url: "/psycholog-dla-mlodziezy",
         },
         {
+            name: "Psycholog online",
+            url: "/psycholog-online",
+        },
+        {
             name: "Blog",
             url: "/blog",
         },

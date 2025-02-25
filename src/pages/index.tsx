@@ -177,7 +177,11 @@ const Help = ( {data} ) => {
                      <li className="mb-2">Niepewność siebie</li>
                      <li className="mb-2">Depresja</li>
                 </ul>
-                <p className="mt-5 text-lg"><strong>Prowadzona przeze mnie pomoc psychologiczna w Białej Podlaskiej przebiega w przyjaznej oraz pełnej zaufania atmosferze.</strong> Jeśli potrzebujesz pomocy psychologicznej  - borykasz się z problemami natury psychicznej lub chcesz otrzymać wsparcie w rozwoju osobistym, zapraszam do mojego gabinetu. </p>
+                <p className="mt-5 text-lg">
+                    <strong>Prowadzona przeze mnie pomoc psychologiczna w Białej Podlaskiej przebiega w przyjaznej oraz pełnej zaufania atmosferze.</strong> Jeśli potrzebujesz pomocy psychologicznej  - borykasz się z problemami natury psychicznej lub chcesz otrzymać wsparcie w rozwoju osobistym, zapraszam do mojego gabinetu.
+                    Dla Twojej wygody oferuję również <strong>konsultacje psychologiczne online</strong>, dzięki którym możesz otrzymać profesjonalną pomoc bez względu na miejsce, w którym się znajdujesz.
+                    </p>
+
             </div>
         </div>
     )
